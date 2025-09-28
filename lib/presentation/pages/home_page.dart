@@ -28,25 +28,15 @@ class HomePage extends StatelessWidget {
         color: Colors.grey.shade50,
         child: const FlashCardGrid(),
       ),
-      floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton: FloatingActionButton(
         onPressed: () async {
           await _navigateToAddFlashCard(context);
           context.read<FlashCardBloc>().add(LoadFlashCards());
         },
         backgroundColor: Colors.blue.shade600,
-        icon: const Icon(Icons.add, color: Colors.white, size: 24),
-        label: const Text(
-          'Tạo Flash Card',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        extendedPadding:
-            const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        shape: CircleBorder(),
+        child: const Icon(Icons.add, color: Colors.white, size: 24),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 

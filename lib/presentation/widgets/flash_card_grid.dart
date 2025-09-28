@@ -84,6 +84,7 @@ class FlashCardGrid extends StatelessWidget {
 
           return Container(
             color: Colors.grey.shade50,
+            padding: const EdgeInsets.all(50),
             child: GridView.builder(
               padding: EdgeInsets.zero,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
