@@ -6,8 +6,8 @@ import '../bloc/flash_card_event.dart';
 import '../widgets/flash_card_grid.dart';
 import 'add_flash_card_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FlashCardPage extends StatelessWidget {
+  const FlashCardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

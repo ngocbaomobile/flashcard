@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/di/injection.dart' as di;
-import 'presentation/bloc/flash_card_bloc.dart';
-import 'presentation/bloc/flash_card_event.dart';
-import 'presentation/pages/home_page.dart';
+import 'presentation/pages/main_menu_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,10 +24,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: BlocProvider(
-        create: (context) => di.sl<FlashCardBloc>()..add(LoadFlashCards()),
-        child: const HomePage(),
-      ),
+      home: const MainMenuPage(),
     );
   }
 }
